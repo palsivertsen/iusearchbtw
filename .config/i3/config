@@ -3,11 +3,11 @@
 ###########
 
 set $mod Mod4
-font pango:Source Code Pro Regular 12
+font pango:Source Code Variable Roman 12
 floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec "dmenu_run -nf '#24858A' -nb '#191B18' -sb '#191B18' -sf '#0AEEFA' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
+bindsym $mod+d exec "dmenu_run -nf '#24858A' -nb '#191B18' -sb '#191B18' -sf '#0AEEFA' -fn 'Source Code Variable Roman-12' -p 'Run:'"
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
