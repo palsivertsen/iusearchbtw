@@ -128,8 +128,8 @@ bar {
 
 	# Colors
 	colors {
-		background #000000
-		statusline #FFFFFF
+		background #020308
+		statusline #a3ffff
 		separator  #666666
 
 		focused_workspace  #24858A #191B18 #0AEEFA
