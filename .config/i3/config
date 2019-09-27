@@ -18,6 +18,7 @@ bindsym $mod+Shift+a focus child
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym Control+mod1+l exec i3lock -def -I 10
 
 ##############
 # Workspaces #
@@ -28,6 +29,7 @@ bindsym $mod+x focus output right
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+shift+Tab workspace prev_on_output
 bindsym $mod+b workspace back_and_forth
+bindsym $mod+n exec --no-startup-id bash ~/.config/i3/new-workspace
 
 # change focus
 bindsym $mod+j focus left
