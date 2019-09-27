@@ -1,0 +1,34 @@
+[core]
+  autocrlf = input
+  editor = vim
+  pager = less -x4
+[color]
+  ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = true
+[push]
+  default = simple
+[alias]
+  logx = log --all --graph --decorate=short --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
+  co = checkout
+  staged = diff --staged
+  diffx = diff --word-diff=color
+  whatchangedx = whatchanged --oneline --graph
+  ahead = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  addx = add -N .
+  s = status
+  p = add -p
+  append = commit --amend --no-edit
+  prune-features = !git checkout develop && \
+    git pull && \
+    git branch --merged | grep feature/ | xargs -r git branch -d && \
+    echo "Remaining branches:" && \
+    git branch
+  conflicts = diff --name-only --diff-filter=U
+  prune-branches = !git pull --all --prune && git branch --merged | grep -v '*' | xargs git branch -d
+
+[user]
+  email = palsivertsen@gmail.com
+  name = Pal Sivertsen
