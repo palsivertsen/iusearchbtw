@@ -14,9 +14,20 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+##############
+# Workspaces #
+##############
+
+bindsym $mod+shift+x move workspace to output right
+bindsym $mod+x focus output right
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+shift+Tab workspace prev_on_output
+bindsym $mod+b workspace back_and_forth
 
 # change focus
 bindsym $mod+j focus left
