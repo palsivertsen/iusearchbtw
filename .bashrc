@@ -22,9 +22,7 @@ tabs -4
 ###########
 # Aliases #
 ###########
-if [ -d ~/.bash_aliases.d/ ]; then
-    . ~/.bash_aliases.d/*.bash
-fi
+for f in ~/.bash_aliases.d/*.bash; do source $f; done
 
 #######
 # git #
