@@ -24,10 +24,14 @@ tabs -4
 ###########
 for f in ~/.bash_aliases.d/*.bash; do source $f; done
 
+################
+# Bash scripts #
+################
+for f in ~/.bash_scripts.d/*.bash; do source $f; done
+
 #######
 # git #
 #######
-source ~/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
