@@ -55,10 +55,6 @@ let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
-" Molokai
-let g:rehash256 = 1
-colorscheme vim-color
-
 " vim-brightest
 let g:brightest#highlight = {
 \   "group" : "Visual"
@@ -71,3 +67,6 @@ let g:ctrlp_show_hidden = 1
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" Colorscheme
+colorscheme vim-color
