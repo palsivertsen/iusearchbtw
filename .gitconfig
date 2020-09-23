@@ -32,3 +32,5 @@
 [user]
   email = palsivertsen@gmail.com
   name = Pal Sivertsen
+[pull]
+	ff = only
