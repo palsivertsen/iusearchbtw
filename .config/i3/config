@@ -191,3 +191,4 @@ bindsym Print exec gnome-screenshot -i
 
 exec --no-statup-id keynav
 exec --no-statup-id /usr/bin/dunst
+exec --no-statup-id feh --bg-center $(curl "http://www.splashbase.co/api/v1/images/random?images_only=true" | jq -r '.large_url')
