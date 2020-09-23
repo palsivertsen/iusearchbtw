@@ -48,7 +48,7 @@ autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
 " Ale
-let g:ale_proto_protoc_gen_lint_options = "-I=/usr/local/include"
+let g:ale_proto_protoc_gen_lint_options = "-I=/usr/local/include -I=$(git rev-parse --show-toplevel)"
 " Completion
 let g:UltiSnipsExpandTrigger = "<nul>" " terminal sends NUL on ctrl+space
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
