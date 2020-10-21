@@ -41,6 +41,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
+autocmd Filetype go set spell
 
 " keybindings
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
