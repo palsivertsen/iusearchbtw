@@ -3,7 +3,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'palsivertsen/molokai' | Plug 'palsivertsen/vim-color'
+Plug 'palsivertsen/molokai'
+Plug 'palsivertsen/vim-color'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets' " GO111MODULE=on go get golang.org/x/tools/gopls@latest
 Plug 'osyo-manga/vim-brightest'
 Plug 'dense-analysis/ale'
@@ -69,7 +70,7 @@ if has("autocmd")
 endif
 
 " Colorscheme
-colorscheme molokai
+colorscheme vim-color
 
 " Git
 " Spellcheck commit messages
