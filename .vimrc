@@ -70,3 +70,7 @@ endif
 
 " Colorscheme
 colorscheme molokai
+
+" Git
+" Spellcheck commit messages
+autocmd Filetype gitcommit set spell
