@@ -20,6 +20,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym Control+mod1+l exec i3lock -def -I 10
 bindsym $mod+g exec chromium
+bindsym $mod+shift+b border toggle
 
 ##############
 # Workspaces #
