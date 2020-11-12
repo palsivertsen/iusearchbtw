@@ -77,3 +77,6 @@ colorscheme vim-color
 " Git
 " Spellcheck commit messages
 autocmd Filetype gitcommit set spell
+
+" Protobuf
+autocmd Filetype proto set expandtab tabstop=2 shiftwidth=2
