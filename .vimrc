@@ -18,6 +18,7 @@ set ignorecase
 set wildmenu
 set scrolloff=999
 set termguicolors
+set nowrap
 
 " Undercurl control chars for gnome terminal
 let &t_Cs = "\e[4:3m"
