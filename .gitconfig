@@ -12,7 +12,11 @@
   default = simple
 [alias]
 	fixuphead = commit --fixup=HEAD
-  logx = log --all --graph --decorate=short --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
+  logx = log --graph --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
+  logxall = logx --all
+  logxmaster = logx master..
+  logxnofixup = logx --grep=fixup --invert-grep
+  logxnofixupmaster = logxnofixup master..
   co = checkout
   staged = diff --staged
   diffx = diff --word-diff=color
