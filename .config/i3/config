@@ -192,4 +192,3 @@ bindsym Print exec gnome-screenshot -i
 
 exec --no-statup-id keynav
 exec --no-statup-id /usr/bin/dunst
-exec --no-statup-id /bin/bash -c 'j=$(curl 'http://www.splashbase.co/api/v1/images/random?images_only=true') && echo "$j"; large=$(echo "$j" | jq -r '.large') url=$(echo "$j" | jq -r '.url') && feh --bg-center "$large" || feh --bg-center "$url"'
