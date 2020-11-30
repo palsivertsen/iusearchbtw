@@ -32,6 +32,7 @@ bindsym $mod+Tab workspace next_on_output
 bindsym $mod+shift+Tab workspace prev_on_output
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+n exec --no-startup-id bash ~/.config/i3/new-workspace
+bindsym $mod+Shift+n exec --no-startup-id bash ~/.config/i3/new-workspace-at-end
 
 # change focus
 bindsym $mod+j focus left
