@@ -49,6 +49,7 @@ autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+nnoremap <c-_> :nohlsearch<cr>
 
 " Ale
 let g:ale_proto_protoc_gen_lint_options = "-I=/usr/local/include -I=$(git rev-parse --show-toplevel)"
