@@ -17,12 +17,19 @@ set autochdir
 set ignorecase
 set wildmenu
 set scrolloff=999
-set termguicolors
 set nowrap
 
 " Undercurl control chars for gnome terminal
 let &t_Cs = "\e[4:3m"
 let &t_Ce = "\e[4:0m"
+
+" Truecolor
+set termguicolors
+let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+
+" Colorscheme
+colorscheme vim-color
 
 " vim-go
 let g:go_list_type = "quickfix"
@@ -59,11 +66,6 @@ let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
-" vim-brightest
-let g:brightest#highlight = {
-\   "group" : "Visual"
-\}
-
 " ctrlp
 let g:ctrlp_show_hidden = 1
 
@@ -71,9 +73,6 @@ let g:ctrlp_show_hidden = 1
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-" Colorscheme
-colorscheme vim-color
 
 " Git
 " Spellcheck commit messages
