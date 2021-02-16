@@ -31,13 +31,13 @@ font:
   size: 12
   normal:
     family: Source Code Pro
-    style: Regular
+    style: Semibold
   bold:
     family: Source Code Pro
-    style: Bold
+    style: Black
   italic:
     family: Source Code Pro
     style: Semibold Italic
   bold_italic:
     family: Source Code Pro
-    style: Bold Italic
+    style: Black Italic
