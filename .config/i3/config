@@ -195,3 +195,4 @@ bindsym Print exec gnome-screenshot -i
 
 exec --no-statup-id keynav
 exec --no-statup-id /usr/bin/dunst
+exec --no-statup-id picom -b
