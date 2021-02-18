@@ -26,7 +26,7 @@ export GOPATH=/home/pal/projects/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 # Wallpaper
-j=$(curl "http://www.splashbase.co/api/v1/images/random?images_only=true")
-large=$(echo "$j" | jq -r ".large_url")
-url=$(echo "$j" | jq -r ".url")
-feh --bg-center "$large" || feh --bg-center "$url"
+#j=$(curl "http://www.splashbase.co/api/v1/images/random?images_only=true")
+#large=$(echo "$j" | jq -r ".large_url")
+#url=$(echo "$j" | jq -r ".url")
+#feh --bg-center "$large" || feh --bg-center "$url"

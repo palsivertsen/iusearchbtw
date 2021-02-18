@@ -192,3 +192,4 @@ bindsym Print exec gnome-screenshot -i
 exec keynav
 exec dunst
 exec picom
+exec ~/.fehbg
