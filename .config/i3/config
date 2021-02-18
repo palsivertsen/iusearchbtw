@@ -112,6 +112,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+###########
+# Styling #
+###########
+
+default_border none
+default_floating_border none
+
 ##########
 # Colors #
 ##########
@@ -182,6 +189,6 @@ bindsym Print exec gnome-screenshot -i
 # Apps #
 ########
 
-exec --no-statup-id keynav
-exec --no-statup-id /usr/bin/dunst
-exec --no-statup-id picom -b
+exec keynav
+exec dunst
+exec picom
