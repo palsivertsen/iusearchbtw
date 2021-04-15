@@ -3,7 +3,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'palsivertsen/molokai'
+"Plug 'palsivertsen/molokai'
+Plug 'Erichain/vim-monokai-pro'
 Plug 'palsivertsen/vim-color'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets' " GO111MODULE=on go get golang.org/x/tools/gopls@latest
 Plug 'dense-analysis/ale'
@@ -28,7 +29,8 @@ let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 
 " Colorscheme
-colorscheme vim-color
+"colorscheme vim-color
+colorscheme monokai_pro
 
 " vim-go
 let g:go_list_type = "quickfix"
