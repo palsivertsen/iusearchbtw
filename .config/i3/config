@@ -28,6 +28,8 @@ bindsym $mod+shift+b border toggle
 
 bindsym $mod+shift+x move workspace to output right
 bindsym $mod+x focus output right
+bindsym $mod+shift+z move workspace to output left
+bindsym $mod+z focus output left
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+shift+Tab workspace prev_on_output
 bindsym $mod+b workspace back_and_forth
