@@ -104,7 +104,7 @@ mode "resize" {
 
         bindsym Shift+h resize shrink right 10 px or 10 ppt
         bindsym Shift+j resize shrink up 10 px or 10 ppt
-        bindsym Shift+k resize shrink right 10 px or 10 ppt
+        bindsym Shift+k resize shrink down 10 px or 10 ppt
         bindsym Shift+l resize shrink left 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
