@@ -67,6 +67,8 @@ nnoremap <c-_> :nohlsearch<cr>
 
 " Ale
 let g:ale_proto_protoc_gen_lint_options = "-I=/usr/local/include -I=$(git rev-parse --show-toplevel)"
+let g:ale_linters = {'go': ['gofmt', 'golint', 'gopls', 'govet', 'golangci-lint']}
+let ale_go_golangci_lint_options = ""
 " Completion
 let g:UltiSnipsExpandTrigger = "<nul>" " terminal sends NUL on ctrl+space
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
