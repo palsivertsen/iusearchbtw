@@ -8,6 +8,7 @@ Plug 'Erichain/vim-monokai-pro'
 Plug 'palsivertsen/vim-color'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets' " GO111MODULE=on go get golang.org/x/tools/gopls@latest
 Plug 'dense-analysis/ale'
+Plug 'unblevable/quick-scope'
 call plug#end()
 
 set nu rnu
@@ -37,6 +38,9 @@ set foldnestmax=2
 " Colorscheme
 "colorscheme vim-color
 colorscheme monokai_pro
+
+" quick scope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " vim-go
 let g:go_list_type = "quickfix"
