@@ -3,8 +3,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-"Plug 'palsivertsen/molokai'
-Plug 'Erichain/vim-monokai-pro'
+Plug 'palsivertsen/molokai'
+"Plug 'Erichain/vim-monokai-pro'
 Plug 'palsivertsen/vim-color'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets' " GO111MODULE=on go get golang.org/x/tools/gopls@latest
 Plug 'dense-analysis/ale'
@@ -37,7 +37,8 @@ set foldnestmax=2
 
 " Colorscheme
 "colorscheme vim-color
-colorscheme monokai_pro
+"colorscheme monokai_pro
+colorscheme molokai
 
 " quick scope
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
