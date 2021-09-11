@@ -3,12 +3,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'palsivertsen/molokai'
-"Plug 'Erichain/vim-monokai-pro'
-Plug 'palsivertsen/vim-color'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets' " GO111MODULE=on go get golang.org/x/tools/gopls@latest
 Plug 'dense-analysis/ale'
 Plug 'unblevable/quick-scope'
+Plug 'palsivertsen/vim-cterm'
 call plug#end()
 
 set nu rnu
@@ -30,8 +28,8 @@ if $TERM == "xterm-kitty"
 	let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 endif
 
-" Truecolor
-set termguicolors
+" Use terminal colors
+set notermguicolors
 
 " folding
 set foldmethod=syntax
@@ -39,9 +37,7 @@ set foldlevelstart=99
 set foldnestmax=2
 
 " Colorscheme
-"colorscheme vim-color
-"colorscheme monokai_pro
-colorscheme molokai
+colorscheme vim-cterm
 
 " quick scope
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
