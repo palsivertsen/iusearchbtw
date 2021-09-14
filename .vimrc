@@ -16,7 +16,6 @@ set autochdir
 set ignorecase
 set wildmenu
 set scrolloff=999
-set nowrap
 set listchars=eol:$,space:·,tab:>-
 
 " TODO extract to plugin
@@ -30,6 +29,11 @@ endif
 
 " Use terminal colors
 set notermguicolors
+
+" Wrapping
+set breakindent
+set breakindentopt=sbr
+set showbreak=↳
 
 " folding
 set foldmethod=syntax
