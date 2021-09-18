@@ -28,6 +28,11 @@ if $TERM == "xterm-kitty"
 	let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 endif
 
+" Spelling
+set spelllang=en_us,nb
+set spellfile=~/.vim/spell/custom.utf-8.add
+set spell
+
 " Use terminal colors
 set notermguicolors
 
