@@ -20,8 +20,8 @@ set completion-query-items 250
 
 set keymap vi-insert
 TAB:menu-complete
-"\C-p":previous-history
-"\C-n":next-history
+"\C-p":history-search-backward
+"\C-n":history-search-forward
 "\C-o":operate-and-get-next
 "\C-f":forward-search-history
 "\C-l":clear-screen
