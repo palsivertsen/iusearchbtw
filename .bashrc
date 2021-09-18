@@ -1,16 +1,18 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# don't put duplicate lines or lines starting with space in the history.
-# Erase duplicates to keep file minimal
-# See bash(1) for more options
-HISTCONTROL=ignoreboth:erasedups
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+EDITOR=vim
 
-HISTSIZE=5000
-HISTFILESIZE=10000
-
-# append to the history file, don't overwrite it
+###########
+# History #
+###########
+# Keep this many lines from each session
+HISTSIZE=1000
+# Store at most this many lines
+HISTFILESIZE=100000
+# Ignore lines starting with a space
+HISTCONTROL=ignorespace
+# Append to the history file, don't overwrite it
 shopt -s histappend
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
