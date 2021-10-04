@@ -100,6 +100,8 @@ let g:UltiSnipsExpandTrigger = "<nul>" " terminal sends NUL on ctrl+space
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" Highlighting
+highlight! link ALEWarningSign Warning
 
 " ctrlp
 let g:ctrlp_show_hidden = 1
