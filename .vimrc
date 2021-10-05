@@ -52,9 +52,8 @@ colorscheme vim-cterm
 let g:airline_theme='molokai'
 
 " quick scope
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
-
+highlight QuickScopePrimary cterm=undercurl ctermul=green
+highlight QuickScopeSecondary cterm=undercurl ctermul=yellow
 
 " vim-go
 let g:go_list_type = "quickfix"
