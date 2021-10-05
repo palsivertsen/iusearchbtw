@@ -19,6 +19,8 @@ set wildmenu
 set scrolloff=999
 set listchars=eol:$,space:·,tab:>-
 
+let g:mapleader=" "
+
 " TODO extract to plugin
 if $TERM == "xterm-kitty"
 	let &t_Cs = "\e[4:3m"
