@@ -39,9 +39,6 @@ set spelllang=en_us,nb
 set spellfile=~/.vim/spell/custom.utf-8.add
 set spell
 
-" Use terminal colors
-set notermguicolors
-
 " Wrapping
 set breakindent
 set breakindentopt=sbr
@@ -52,14 +49,22 @@ set foldmethod=syntax
 set foldlevelstart=99
 set foldnestmax=2
 
+""""""""""
+" Colors "
+""""""""""
+" Use terminal colors
+set notermguicolors
 " Colorscheme
 colorscheme vim-cterm
-
+" Airline theme
 let g:airline_theme='molokai'
-
-" quick scope
+" Quick scope
 highlight QuickScopePrimary cterm=undercurl ctermul=green
 highlight QuickScopeSecondary cterm=undercurl ctermul=yellow
+" Other colors
+highlight GitGutterAdd        ctermfg=green ctermbg=NONE cterm=NONE ctermul=NONE
+highlight GitGutterChange     ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
+highlight GitGutterDelete     ctermfg=red ctermbg=NONE cterm=NONE ctermul=NONE
 
 " vim-go
 let g:go_fmt_command = "goimports"
