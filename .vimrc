@@ -20,8 +20,10 @@ set scrolloff=999
 set listchars=eol:$,space:·,tab:>-
 
 let g:mapleader=" "
-nnoremap <Leader>k :labove<CR>
+nnoremap <Leader>h :lbefore<CR>
 nnoremap <Leader>j :lbelow<CR>
+nnoremap <Leader>k :labove<CR>
+nnoremap <Leader>l :lafter<CR>
 
 " TODO extract to plugin
 if $TERM == "xterm-kitty"
