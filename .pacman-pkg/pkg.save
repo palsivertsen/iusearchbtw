@@ -8,7 +8,6 @@ bison
 bluez
 bluez-utils
 diff-so-fancy
-dmenu
 docker
 docker-compose
 dunst
@@ -54,6 +53,7 @@ playerctl
 pulseaudio
 pulseaudio-alsa
 python
+rofi
 slack-desktop
 spotify
 sudo
