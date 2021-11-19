@@ -65,6 +65,7 @@ highlight QuickScopeSecondary cterm=undercurl ctermul=yellow
 highlight GitGutterAdd        ctermfg=green ctermbg=NONE cterm=NONE ctermul=NONE
 highlight GitGutterChange     ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
 highlight GitGutterDelete     ctermfg=red ctermbg=NONE cterm=NONE ctermul=NONE
+highlight QuickFixLine        ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
 
 " vim-go
 let g:go_fmt_command = "goimports"
