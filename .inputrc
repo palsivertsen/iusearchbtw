@@ -7,8 +7,8 @@ set mark-symlinked-directories On
 set mark-directories On
 set visible-stats On
 set show-mode-in-prompt On
-set vi-ins-mode-string "i"
-set vi-cmd-mode-string "c"
+set vi-ins-mode-string " "
+set vi-cmd-mode-string ":"
 set colored-completion-prefix On
 set print-completions-horizontally On
 

@@ -7,11 +7,11 @@ EDITOR=vim
 # History #
 ###########
 # Keep this many lines from each session
-HISTSIZE=1000
+HISTSIZE=5000
 # Store at most this many lines
 HISTFILESIZE=100000
 # Ignore lines starting with a space
-HISTCONTROL=ignorespace
+HISTCONTROL=ignorespace:erasedups
 # Append to the history file, don't overwrite it
 shopt -s histappend
 # check the window size after each command and, if necessary,
