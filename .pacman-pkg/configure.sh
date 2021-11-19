@@ -8,6 +8,14 @@ pkg_print () {
 	pacman -Qqe
 }
 
+pkg_diff () {
+	echo "The following packages are missing:"
+	comm -13 <(pacman -Qqe | sort) <(sort "$SAVE_FILE")
+	echo
+	echo "The following are not tracked:"
+	comm -23 <(pacman -Qqe | sort) <(sort "$SAVE_FILE")
+}
+
 pkg_save () {
 	pkg_print > "$SAVE_FILE"
 }
@@ -23,6 +31,9 @@ pkg_clean () {
 case "$1" in
 	"print")
 		pkg_print
+		;;
+	"diff")
+		pkg_diff
 		;;
 	"save")
 		pkg_save
