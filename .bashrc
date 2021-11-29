@@ -52,3 +52,9 @@ PS1_CURRENT_TIME="\[$(tput setaf 6)\]\t"
 PS1_USER_NAME="\[$(tput setaf 3)\]\u"
 PS1_WORKING_DIR="\[$(tput setaf 2)\]\w"
 export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_NAME $PS1_WORKING_DIR\[\033[0m\]" "\n$ \[$(tput sgr0)\]"'
+
+#######
+# fzf #
+#######
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
