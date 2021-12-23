@@ -30,3 +30,6 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 #large=$(echo "$j" | jq -r ".large_url")
 #url=$(echo "$j" | jq -r ".url")
 #feh --bg-center "$large" || feh --bg-center "$url"
+
+# Screensaver
+xset s 300 60
