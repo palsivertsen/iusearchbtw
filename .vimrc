@@ -8,6 +8,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' |
 Plug 'dense-analysis/ale'
 Plug 'unblevable/quick-scope'
 Plug 'palsivertsen/vim-cterm'
+Plug 'palsivertsen/lowercase-dockerfile'
 call plug#end()
 
 set nu rnu
