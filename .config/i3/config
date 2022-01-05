@@ -147,7 +147,7 @@ client.background       #050505
 # Status bar #
 ##############
 
-exec --no-startup-id xfce4-panel --disable-wm-check
+exec --no-startup-id bash /home/pal/.config/polybar/launch.sh
 
 ###############
 # Screen Lock #
