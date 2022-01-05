@@ -58,3 +58,13 @@ export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_N
 #######
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+
+######
+# jq #
+######
+export JQ_COLORS="1;37:0;31:0;32:0;39:0;33:1;39:1;39"
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
