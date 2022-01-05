@@ -33,3 +33,8 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 # Screensaver
 xset s 300 60
+
+###########
+# flutter #
+###########
+export CHROME_EXECUTABLE=google-chrome-stable
