@@ -31,6 +31,11 @@ for f in ~/.bash_aliases.d/*.bash; do source $f; done
 ################
 for f in ~/.bash_scripts.d/*.bash; do source $f; done
 
+###################
+# Bash completion #
+###################
+source <(flutter bash-completion)
+
 #######
 # git #
 #######
@@ -63,6 +68,14 @@ source /usr/share/fzf/completion.bash
 # jq #
 ######
 export JQ_COLORS="1;37:0;31:0;32:0;39:0;33:1;39:1;39"
+
+
+
+
+########
+# Dart #
+########
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
