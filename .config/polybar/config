@@ -137,6 +137,7 @@ label = CPU %percentage%%
 
 ; Spacing between individual per-core ramps
 ramp-coreload-spacing = 1
+ramp-coreload-font = 2
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
 ramp-coreload-2 = ▃
