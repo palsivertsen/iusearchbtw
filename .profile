@@ -32,7 +32,7 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 #feh --bg-center "$large" || feh --bg-center "$url"
 
 # Screensaver
-xset s 300 60
+xset s 1800 300
 
 ###########
 # flutter #
