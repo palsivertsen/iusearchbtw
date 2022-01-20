@@ -161,8 +161,8 @@ bar-used-foreground-0 = #55aa55
 bar-used-foreground-1 = #557755
 bar-used-foreground-2 = #f5a70a
 bar-used-foreground-3 = #ff5555
-bar-used-fill = ▐
-bar-used-empty = ▐
+bar-used-fill = █
+bar-used-empty = █
 bar-used-empty-foreground = #444444
 
 [module/wlan]
