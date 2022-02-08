@@ -58,6 +58,11 @@ PS1_USER_NAME="\[$(tput setaf 3)\]\u"
 PS1_WORKING_DIR="\[$(tput setaf 2)\]\w"
 export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_NAME $PS1_WORKING_DIR\[\033[0m\]" "\n$ \[$(tput sgr0)\]"'
 
+###########
+# Flutter #
+###########
+source <(flutter bash-completion)
+
 #######
 # fzf #
 #######
@@ -68,9 +73,6 @@ source /usr/share/fzf/completion.bash
 # jq #
 ######
 export JQ_COLORS="1;37:0;31:0;32:0;39:0;33:1;39:1;39"
-
-
-
 
 ########
 # Dart #
