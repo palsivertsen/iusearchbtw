@@ -185,7 +185,7 @@ bindsym Print exec gnome-screenshot -i
 # Apps #
 ########
 
-exec keynav
+exec keynav daemonize
 exec dunst
 exec picom
 exec ~/.fehbg
