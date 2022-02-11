@@ -185,7 +185,7 @@ bindsym Print exec gnome-screenshot -i
 # Apps #
 ########
 
-exec keynav daemonize
+exec keynav "loadconfig ~/.config/keynavrc,daemonize"
 exec dunst
 exec picom
 exec ~/.fehbg
