@@ -4,7 +4,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets' " GO111MODULE=on go get golang.org/x/tools/gopls@latest
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab' | Plug 'palsivertsen/vim-go-snippets'
 Plug 'dense-analysis/ale'
 Plug 'unblevable/quick-scope'
 Plug 'palsivertsen/vim-cterm'
@@ -69,10 +69,10 @@ highlight GitGutterDelete     ctermfg=red ctermbg=NONE cterm=NONE ctermul=NONE
 highlight QuickFixLine        ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
 
 " vim-go
-let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
 let g:go_addtags_transform = "camelcase"
 let g:go_auto_type_info = 1
+let g:go_template_autocreate = 0
 " highlighing
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_chan_whitespace_error = 1
