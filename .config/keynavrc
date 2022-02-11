@@ -1,28 +1,40 @@
 clear
+
+# Misc
 ctrl+semicolon start
 Escape end
 a history-back
-h cut-left,cut-down,move-up 0.5
-j cut-down,cut-left,move-right 0.5
-k cut-up,cut-left,move-right 0.5
-l cut-right,cut-down,move-up 0.5
-shift+h move-left
-shift+j move-down
-shift+k move-up
-shift+l move-right
 space warp,click 1,windowzoom
 Return warp,click 1,end
 semicolon warp,end
 w warp
 t windowzoom
 c cursorzoom 300 300
+
+# Clicking
 ctrl+1 click 1
 ctrl+2 click 2
 ctrl+3 click 3
 1 warp,click 1
 2 warp,click 2
 3 warp,click 3
-e cut-left,cut-up
-r cut-right,cut-up
-d cut-left,cut-down
-f cut-right,cut-down
+
+# Moving
+shift+h move-left
+shift+j move-down
+shift+k move-up
+shift+l move-right
+shift+g move-right,move-down
+shift+f move-left,move-down
+shift+d move-right,move-up
+shift+s move-left,move-up
+
+# Cutting
+h cut-left,cut-down,move-up 0.5
+j cut-down,cut-left,move-right 0.5
+k cut-up,cut-left,move-right 0.5
+l cut-right,cut-down,move-up 0.5
+g cut-right,cut-down
+f cut-left,cut-down
+d cut-right,cut-up
+s cut-left,cut-up
