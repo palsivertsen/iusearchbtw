@@ -15,8 +15,12 @@ for dir in $(find -mindepth 1 -maxdepth 1 -type d); do
 	print_header "Updating $dir"
 	(
 		cd $dir
-		git pull
+		status=$(git pull)
+		echo "$status"
+		if [[ "$status" == "Already up to date." ]]; then
+			exit
+		fi
 		makepkg -sirc --noconfirm
+		echo "Done updating $dir"
 	)
-	echo "Done updating $dir"
 done
