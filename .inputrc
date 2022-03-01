@@ -10,7 +10,6 @@ set show-mode-in-prompt On
 set vi-ins-mode-string " "
 set vi-cmd-mode-string ":"
 set colored-completion-prefix On
-set print-completions-horizontally On
 
 # menu-complete
 set menu-complete-display-prefix On
