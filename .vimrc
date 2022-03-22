@@ -9,6 +9,7 @@ Plug 'dense-analysis/ale'
 Plug 'unblevable/quick-scope'
 Plug 'palsivertsen/vim-cterm'
 Plug 'palsivertsen/lowercase-dockerfile'
+Plug 'preservim/tagbar'
 call plug#end()
 
 set nu rnu
