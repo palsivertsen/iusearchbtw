@@ -35,6 +35,8 @@ for f in ~/.bash_scripts.d/*.bash; do source $f; done
 # Bash completion #
 ###################
 source <(flutter bash-completion)
+complete -C /usr/bin/aws_completer aws
+source <(yq shell-completion bash)
 
 #######
 # git #
@@ -57,11 +59,6 @@ PS1_CURRENT_TIME="\[$(tput setaf 6)\]\t"
 PS1_USER_NAME="\[$(tput setaf 3)\]\u"
 PS1_WORKING_DIR="\[$(tput setaf 2)\]\w"
 export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_NAME $PS1_WORKING_DIR\[\033[0m\]" "\n$ \[$(tput sgr0)\]"'
-
-###########
-# Flutter #
-###########
-source <(flutter bash-completion)
 
 #######
 # fzf #
