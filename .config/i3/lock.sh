@@ -6,6 +6,6 @@
 IMAGE=$(mktemp lock-XXX.png)
 
 import -window root $IMAGE
-convert $IMAGE -blur 0x5 $IMAGE
+convert -scale 10% -blur 0x1 -resize 1000% $IMAGE $IMAGE
 i3lock -efi $IMAGE $@
 rm $IMAGE
