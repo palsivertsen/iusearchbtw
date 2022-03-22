@@ -20,7 +20,7 @@ for dir in $(find -mindepth 1 -maxdepth 1 -type d); do
 		if [[ "$status" == "Already up to date." ]]; then
 			exit
 		fi
-		makepkg -sirc --noconfirm
+		makepkg -si --noconfirm
 		echo "Done updating $dir"
 	)
 done
