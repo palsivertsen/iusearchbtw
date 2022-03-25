@@ -9,7 +9,7 @@ killall -q polybar
 for MONITOR in $(xrandr --listactivemonitors | tail -n+2 | grep -Po '[-\w]*$'); do
     export MONITOR
     echo "---" >> $LOG_DIR/main-$MONITOR.log
-    polybar -r main 2>&1 >> $LOG_DIR/main-$MONITOR.log & disown
+    polybar -r main 2>> $LOG_DIR/main-$MONITOR.log &
 done
 
 echo "Bars launched..."
