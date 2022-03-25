@@ -72,6 +72,8 @@ highlight goSameids           ctermbg=darkgrey
 
 " vim-go
 let g:go_fmt_fail_silently = 1
+let g:go_fmt_command = "gopls"
+let g:go_gopls_gofumpt = 1
 let g:go_addtags_transform = "camelcase"
 let g:go_auto_type_info = 1
 let g:go_template_autocreate = 0
