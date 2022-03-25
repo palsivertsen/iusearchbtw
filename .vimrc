@@ -68,12 +68,14 @@ highlight GitGutterAdd        ctermfg=green ctermbg=NONE cterm=NONE ctermul=NONE
 highlight GitGutterChange     ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
 highlight GitGutterDelete     ctermfg=red ctermbg=NONE cterm=NONE ctermul=NONE
 highlight QuickFixLine        ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
+highlight goSameids           ctermbg=darkgrey
 
 " vim-go
 let g:go_fmt_fail_silently = 1
 let g:go_addtags_transform = "camelcase"
 let g:go_auto_type_info = 1
 let g:go_template_autocreate = 0
+let g:go_auto_sameids = 1
 " highlighing
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_chan_whitespace_error = 1
