@@ -34,7 +34,7 @@ for f in ~/.bash_scripts.d/*.bash; do source $f; done
 ###################
 # Bash completion #
 ###################
-source <(flutter bash-completion)
+for f in ~/.bash_completion.d/*.bash; do source $f; done
 complete -C /usr/bin/aws_completer aws
 source <(yq shell-completion bash)
 
