@@ -17,10 +17,7 @@ for dir in $(find -mindepth 1 -maxdepth 1 -type d); do
 		cd $dir
 		status=$(git pull)
 		echo "$status"
-		if [[ "$status" == "Already up to date." ]]; then
-			exit
-		fi
-		makepkg -si --noconfirm
+		makepkg -si --noconfirm --needed
 		echo "Done updating $dir"
 	)
 done
