@@ -5,7 +5,13 @@
 
 IMAGE=$(mktemp lock-XXX.png)
 
+# disable notifications
+dunstctl set-paused true
+
 import -window root $IMAGE
 convert -scale 10% -blur 0x1 -resize 1000% $IMAGE $IMAGE
-i3lock -efi $IMAGE $@
+i3lock -nefi $IMAGE $@
 rm $IMAGE
+
+# enable notifications
+dunstctl set-paused false
