@@ -181,6 +181,10 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 ###########
 bindsym Print exec gnome-screenshot -i
 
+# Dunst
+bindsym Mod1+space exec --no-startup-id dunstctl close-all
+bindsym Mod1+shift+space exec --no-startup-id dunstctl history-pop
+
 ########
 # Apps #
 ########
