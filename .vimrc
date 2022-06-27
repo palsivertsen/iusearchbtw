@@ -26,6 +26,7 @@ nnoremap <Leader>h :lbefore<CR>
 nnoremap <Leader>j :lbelow<CR>
 nnoremap <Leader>k :labove<CR>
 nnoremap <Leader>l :lafter<CR>
+autocmd BufNewFile,BufRead *.go nnoremap <Leader>f :GoFillStruct<CR>
 
 " TODO extract to plugin
 if $TERM == "xterm-kitty"
