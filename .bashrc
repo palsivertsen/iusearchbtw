@@ -24,17 +24,30 @@ tabs -4
 ###########
 # Aliases #
 ###########
-for f in ~/.bash_aliases.d/*.bash; do source $f; done
+for f in ~/.bash_aliases.d/*; do
+	if [[ $f == @(*.bash|*.sh) ]]; then
+		source $f
+	fi
+done
 
 ################
 # Bash scripts #
 ################
-for f in ~/.bash_scripts.d/*.bash; do source $f; done
+for f in ~/.bash_scripts.d/*; do
+	if [[ $f == @(*.bash|*.sh) ]]; then
+		source $f
+	fi
+done
+
 
 ###################
 # Bash completion #
 ###################
-for f in ~/.bash_completion.d/*.bash; do source $f; done
+for f in ~/.bash_completion.d/*; do
+	if [[ $f == @(*.bash|*.sh) ]]; then
+		source $f
+	fi
+done
 complete -C /usr/bin/aws_completer aws
 source <(yq shell-completion bash)
 
