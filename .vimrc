@@ -115,6 +115,7 @@ let g:ale_go_golangci_lint_options = ""
 let g:ale_go_golangci_lint_package = 1
 
 " Completion
+let g:ale_completion_enabled = 1
 let g:UltiSnipsExpandTrigger = "<nul>" " terminal sends NUL on ctrl+space
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
@@ -124,6 +125,7 @@ highlight! link ALEWarningSign Warning
 
 " ctrlp
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Jump to the last position when reopening a file
 if has("autocmd")
