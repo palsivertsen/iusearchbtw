@@ -29,13 +29,14 @@ nnoremap <Leader>l :lafter<CR>
 autocmd BufNewFile,BufRead *.go nnoremap <Leader>f :GoFillStruct<CR>
 
 " TODO extract to plugin
-if $TERM == "xterm-kitty"
+"if $TERM == "xterm-kitty"
+  let &t_Us = "\e[4:2m"
 	let &t_Cs = "\e[4:3m"
 	let &t_Ce = "\e[4:0m"
 	let &t_8u = "\e[58;2;%lu;%lu;%lum"
 	let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 	let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
-endif
+"endif
 
 " Spelling
 set spelllang=en_us,nb
@@ -62,8 +63,8 @@ colorscheme vim-cterm
 " Airline theme
 let g:airline_theme='molokai'
 " Quick scope
-highlight QuickScopePrimary cterm=undercurl ctermul=green
-highlight QuickScopeSecondary cterm=undercurl ctermul=yellow
+highlight QuickScopePrimary cterm=underline ctermul=green
+highlight QuickScopeSecondary cterm=underdouble ctermul=yellow
 " Other colors
 highlight GitGutterAdd        ctermfg=green ctermbg=NONE cterm=NONE ctermul=NONE
 highlight GitGutterChange     ctermfg=yellow ctermbg=NONE cterm=NONE ctermul=NONE
