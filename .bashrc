@@ -99,3 +99,8 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 # Google app creds #
 ####################
 export GOOGLE_APPLICATION_CREDENTIALS="/home/pal/.firebase/ps-prod-6f2d8-firebase-adminsdk-v0tf0-5440e4cbf8.json"
+
+#######
+# npm #
+#######
+export npm_config_prefix="$HOME/.local"
