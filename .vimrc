@@ -138,3 +138,8 @@ autocmd Filetype gitcommit set spell
 
 " Protobuf
 autocmd Filetype proto set expandtab tabstop=2 shiftwidth=2
+
+" tab config
+autocmd Filetype js set expandtab tabstop=2 shiftwidth=2
+autocmd Filetype javascript set expandtab tabstop=2 shiftwidth=2
+autocmd Filetype json set expandtab tabstop=2 shiftwidth=2
