@@ -78,6 +78,7 @@ export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_N
 #######
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+export KUBECTX_IGNORE_FZF=1
 
 ######
 # jq #
