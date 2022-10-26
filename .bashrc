@@ -105,3 +105,8 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/pal/.firebase/ps-prod-6f2d8-firebas
 # npm #
 #######
 export npm_config_prefix="$HOME/.local"
+
+##########
+# GitLab #
+##########
+source <(lab completion)
