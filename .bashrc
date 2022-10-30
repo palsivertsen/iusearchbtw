@@ -109,4 +109,4 @@ export npm_config_prefix="$HOME/.local"
 ##########
 # GitLab #
 ##########
-source <(lab completion)
+[[ -n $(pathchk lab) ]] && source <(lab completion)
