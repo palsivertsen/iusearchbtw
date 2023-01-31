@@ -112,7 +112,7 @@ nnoremap <c-_> :nohlsearch<cr>
 " Ale
 let g:ale_proto_protoc_gen_lint_options = "-I=/usr/local/include -I=$(git rev-parse --show-toplevel)"
 let g:ale_linters = {'go': ['gopls', 'golangci-lint']}
-let g:ale_go_golangci_lint_options = ""
+let g:ale_go_golangci_lint_options = "--config=~/.golangci.yaml"
 let g:ale_go_golangci_lint_package = 1
 
 " Completion

@@ -1,0 +1,36 @@
+issues:
+  exclude-use-default: false
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - noctx
+        - bodyclose
+        - varnamelen
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - errcheck
+    - ireturn
+    - noctx
+    - revive
+    - varnamelen
+    - wrapcheck
+      # Fast
+    - ineffassign
+    - gocognit
+    - goconst
+    - gocyclo
+    - godot
+    - gomnd
+    - grouper
+    - interfacebloat
+    - misspell
+    - nestif
+    - nolintlint
+    - nosprintfhostport
+    - prealloc
+    - promlinter
+    - testpackage
+    - usestdlibvars
