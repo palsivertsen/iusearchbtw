@@ -179,7 +179,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 ###########
 # Hotkeys #
 ###########
-bindsym Print exec gnome-screenshot -i
+bindsym Print exec flameshot gui
 
 # Dunst
 bindsym Mod1+space exec --no-startup-id dunstctl close-all
