@@ -1,12 +1,3 @@
-issues:
-  exclude-use-default: false
-  exclude-rules:
-    - path: _test\.go
-      linters:
-        - noctx
-        - bodyclose
-        - varnamelen
-
 linters:
   disable-all: true
   enable:
@@ -34,3 +25,32 @@ linters:
     - promlinter
     - testpackage
     - usestdlibvars
+
+issues:
+  exclude-use-default: false
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - noctx
+        - bodyclose
+        - varnamelen
+    - source: time\.\w+(\s*[+\-*\/]\s*\d+)+
+      linters:
+      - gomnd
+
+linters-settings:
+  tagliatelle:
+    case:
+      rules:
+        json: goCamel
+        yaml: goCamel
+  varnamelen:
+    ignore-decls:
+      - T any
+      - i int
+      - ok bool
+      - r *http.Request
+      - r io.Reader
+      - ts *httptest.Server
+      - w http.ResponseWriter
+      - w io.Writer
