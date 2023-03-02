@@ -123,6 +123,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " Highlighting
 highlight! link ALEWarningSign Warning
+highlight! link ALEVirtualTextError NonText
+highlight! link ALEVirtualTextStyleError NonText
+highlight! link ALEVirtualTextWarning NonText
+highlight! link ALEVirtualTextStyleWarning NonText
+highlight! link ALEVirtualTextInfo NonText
 
 " ctrlp
 let g:ctrlp_show_hidden = 1
