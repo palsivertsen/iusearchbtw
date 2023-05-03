@@ -116,6 +116,11 @@ let g:ale_proto_protoc_gen_lint_options = "-I=/usr/local/include -I=$(git rev-pa
 let g:ale_linters = {'go': ['gopls', 'golangci-lint']}
 let g:ale_go_golangci_lint_options = "--config=~/.golangci.yaml"
 let g:ale_go_golangci_lint_package = 1
+let g:ale_fixers = {
+\ 'javascript': ['prettier'],
+\ 'css': ['prettier'],
+\}
+let g:ale_fix_on_save = 1
 
 " Completion
 let g:ale_completion_enabled = 1
