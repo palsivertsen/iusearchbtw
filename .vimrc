@@ -119,6 +119,7 @@ let g:ale_go_golangci_lint_options = "--config=~/.golangci.yaml"
 let g:ale_go_golangci_lint_package = 1
 let g:ale_fixers = {
 \ 'javascript': ['prettier'],
+\ 'javascriptreact': ['prettier'],
 \ 'css': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
