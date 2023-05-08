@@ -62,6 +62,7 @@ set notermguicolors
 colorscheme vim-cterm
 " Airline theme
 let g:airline_theme='molokai'
+let g:airline_symbols = {'linenr': 'ln'}
 " Quick scope
 highlight QuickScopePrimary cterm=underline ctermul=green
 highlight QuickScopeSecondary cterm=underdouble ctermul=yellow
