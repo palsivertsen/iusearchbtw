@@ -10,6 +10,7 @@ Plug 'unblevable/quick-scope'
 Plug 'palsivertsen/vim-cterm'
 Plug 'palsivertsen/lowercase-dockerfile'
 Plug 'preservim/tagbar'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 set nu rnu
@@ -118,8 +119,8 @@ let g:ale_linters = {'go': ['gopls', 'golangci-lint']}
 let g:ale_go_golangci_lint_options = "--config=~/.golangci.yaml"
 let g:ale_go_golangci_lint_package = 1
 let g:ale_fixers = {
-\ 'javascript': ['prettier'],
-\ 'javascriptreact': ['prettier'],
+\ 'javascript': ['prettier', 'eslint'],
+\ 'javascriptreact': ['prettier', 'eslint'],
 \ 'css': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
@@ -130,6 +131,8 @@ let g:UltiSnipsExpandTrigger = "<nul>" " terminal sends NUL on ctrl+space
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+autocmd Filetype javascriptreact :UltiSnipsAddFiletypes html
+
 " Highlighting
 highlight! link ALEWarningSign Warning
 highlight! link ALEVirtualTextError NonText
