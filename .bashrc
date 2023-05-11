@@ -19,7 +19,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # Set terminal tab width
-tabs -4
+tabs -2
 
 ###########
 # Aliases #
