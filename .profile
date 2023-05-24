@@ -38,3 +38,5 @@ xset s 1800 300
 # flutter #
 ###########
 export CHROME_EXECUTABLE=google-chrome-stable
+
+tabs -2

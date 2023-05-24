@@ -18,9 +18,6 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Set terminal tab width
-tabs -2
-
 ###########
 # Aliases #
 ###########
