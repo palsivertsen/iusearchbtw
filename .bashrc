@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-EDITOR=vim
+export EDITOR=vim
 
 ###########
 # History #
