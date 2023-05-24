@@ -124,6 +124,7 @@ let g:ale_fixers = {
 \ 'css': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
+au BufRead,BufNewFile template.yaml set filetype=yaml.cloudformation
 
 " Completion
 let g:ale_completion_enabled = 1
