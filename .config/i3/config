@@ -106,15 +106,17 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 ############
 
 mode "resize" {
-        bindsym h resize grow left 10 px or 10 ppt
-        bindsym j resize grow down 10 px or 10 ppt
-        bindsym k resize grow up 10 px or 10 ppt
+        bindsym h resize shrink right 10 px or 10 ppt
         bindsym l resize grow right 10 px or 10 ppt
 
-        bindsym Shift+h resize shrink right 10 px or 10 ppt
-        bindsym Shift+j resize shrink up 10 px or 10 ppt
-        bindsym Shift+k resize shrink down 10 px or 10 ppt
+        bindsym j resize grow down 10 px or 10 ppt
+        bindsym k resize shrink down 10 px or 10 ppt
+
+        bindsym Shift+h resize grow left 10 px or 10 ppt
         bindsym Shift+l resize shrink left 10 px or 10 ppt
+
+        bindsym Shift+j resize shrink up 10 px or 10 ppt
+        bindsym Shift+k resize grow up 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
