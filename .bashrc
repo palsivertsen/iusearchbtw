@@ -109,3 +109,8 @@ export npm_config_prefix="$HOME/.local"
 # GitLab #
 ##########
 [[ -n $(pathchk lab) ]] && source <(lab completion)
+
+########
+# Less #
+########
+export LESS="--incsearch"
