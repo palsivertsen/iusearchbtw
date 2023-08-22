@@ -135,6 +135,8 @@ bindsym $mod+r mode "resize"
 default_border none
 default_floating_border none
 
+for_window [class="gnome-calculator"] floating enable
+
 ##########
 # Colors #
 ##########
@@ -184,6 +186,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # Hotkeys #
 ###########
 bindsym Print exec flameshot gui
+bindsym $mod+c exec gnome-calculator
 
 # Dunst
 bindsym Mod1+space exec --no-startup-id dunstctl close-all
