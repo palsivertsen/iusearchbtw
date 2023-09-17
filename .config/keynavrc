@@ -4,11 +4,10 @@ clear
 ctrl+semicolon start
 Escape end
 a history-back
-space warp,click 1,windowzoom
+space warp,click 1,cursorzoom 500 500
 Return warp,click 1,end
 semicolon warp,end
-w warp
-t windowzoom
+w windowzoom
 c cursorzoom 300 300
 
 # Clicking
@@ -24,17 +23,9 @@ shift+h move-left
 shift+j move-down
 shift+k move-up
 shift+l move-right
-shift+g move-right,move-down
-shift+f move-left,move-down
-shift+d move-right,move-up
-shift+s move-left,move-up
 
 # Cutting
-h cut-left,cut-down,move-up 0.5
-j cut-down,cut-left,move-right 0.5
-k cut-up,cut-left,move-right 0.5
-l cut-right,cut-down,move-up 0.5
-g cut-right,cut-down
-f cut-left,cut-down
-d cut-right,cut-up
-s cut-left,cut-up
+h cut-left
+j cut-down
+k cut-up
+l cut-right
