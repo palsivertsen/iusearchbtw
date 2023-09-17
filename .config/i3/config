@@ -22,6 +22,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym Control+mod1+l exec bash /home/pal/.config/i3/lock.sh
 bindsym $mod+g exec google-chrome-stable
 bindsym $mod+shift+b border toggle
+bindsym $mod+x move scratchpad
+bindsym $mod+z scratchpad show
 
 ##############
 # Workspaces #
