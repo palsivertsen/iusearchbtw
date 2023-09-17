@@ -58,6 +58,8 @@ GIT_PS1_SHOWUPSTREAM="auto verbose"
 GIT_PS1_DESCRIBE_STYLE="branch"
 GIT_PS1_SHOWCOLORHINTS=1
 
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then source /usr/share/git/completion/git-prompt.sh; fi
+
 # Change PS1
 # See:
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
