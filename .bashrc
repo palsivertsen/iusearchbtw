@@ -45,8 +45,6 @@ for f in ~/.bash_completion.d/*; do
 		source $f
 	fi
 done
-complete -C /usr/bin/aws_completer aws
-source <(yq shell-completion bash)
 
 #######
 # git #
