@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LOG_DIR=/var/log/polybar/
+LOG_DIR=/var/log/polybar
 
 # Terminate already running bar instances
 killall -wq polybar
