@@ -61,7 +61,7 @@ if [ -f /usr/share/git/completion/git-prompt.sh ]; then source /usr/share/git/co
 # AWS status
 awsstatus() {
 	if [ -v AWS_PROFILE ]; then
-		echo '\[$(tput setaf 3)\](aws:$AWS_PROFILE)'
+		echo '\[$(tput sgr0)\](\[$(tput setaf 3)\]aws:$AWS_PROFILE\[$(tput sgr0)\])'
 	fi
 }
 
