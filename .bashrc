@@ -61,7 +61,7 @@ if [ -f /usr/share/git/completion/git-prompt.sh ]; then source /usr/share/git/co
 # AWS status
 awsstatus() {
 	if [ -v AWS_PROFILE ]; then
-		echo '\[$(tput sgr0)\](\[$(tput setaf 3)\]aws:$AWS_PROFILE\[$(tput sgr0)\])'
+		echo ' \[$(tput sgr0)\](\[$(tput setaf 3)\]aws:$AWS_PROFILE\[$(tput sgr0)\])'
 	fi
 }
 
@@ -75,7 +75,7 @@ PS1_EXIT_STATUS="\$(EXIT=\$?; if [[ \$EXIT == 0 ]]; then echo \"$PS1_EXIT_STATUS
 PS1_CURRENT_TIME="\[$(tput setaf 6)\]\t"
 PS1_USER_NAME="\[$(tput setaf 3)\]\u"
 PS1_WORKING_DIR="\[$(tput setaf 2)\]\w"
-export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_NAME $PS1_WORKING_DIR $(awsstatus)\[\033[0m\]" "\n$ \[$(tput sgr0)\]"'
+export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_NAME $PS1_WORKING_DIR$(awsstatus)\[\033[0m\]" "\n$ \[$(tput sgr0)\]"'
 
 #######
 # fzf #
