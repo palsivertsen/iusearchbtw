@@ -1,42 +1,22 @@
 linters:
-  disable-all: true
-  enable:
-    - bodyclose
-    - errcheck
-    - ireturn
-    - noctx
-    - revive
-    - varnamelen
-    - wrapcheck
-      # Fast
-    - ineffassign
-    - gocognit
-    - goconst
-    - gocyclo
-    - godot
-    - gomnd
-    - grouper
-    - interfacebloat
-    - misspell
-    - nestif
-    - nolintlint
-    - nosprintfhostport
-    - prealloc
-    - promlinter
-    - testpackage
-    - usestdlibvars
-
-issues:
-  exclude-use-default: false
-  exclude-rules:
-    - path: _test\.go
-      linters:
-        - noctx
-        - bodyclose
-        - varnamelen
-    - source: time\.\w+(\s*[+\-*\/]\s*\d+)+
-      linters:
-      - gomnd
+  enable-all: true
+  disable:
+    - depguard
+    - exhaustruct
+    - gofumpt
+    - nlreturn
+    - wsl
+    # deprecated linters
+    - deadcode
+    - exhaustivestruct
+    - golint
+    - ifshort
+    - interfacer
+    - maligned
+    - nosnakecase
+    - scopelint
+    - structcheck
+    - varcheck
 
 linters-settings:
   tagliatelle:
