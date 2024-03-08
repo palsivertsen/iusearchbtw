@@ -1,1 +1,1 @@
-alias ducks="du -sh * | sort -hr | head"
+alias ducks="du -sh .* * | sort -hr | head"
