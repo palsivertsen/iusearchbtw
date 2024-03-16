@@ -22,8 +22,7 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 ########
 ## Go ##
 ########
-export GOPATH=/home/pal/projects/go
-export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Wallpaper
 #j=$(curl "http://www.splashbase.co/api/v1/images/random?images_only=true")
