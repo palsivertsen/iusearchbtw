@@ -234,7 +234,6 @@ date-alt =
 time = %T
 time-alt = %H:%M
 
-format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
