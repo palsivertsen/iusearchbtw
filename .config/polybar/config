@@ -57,7 +57,7 @@ font-4 = Symbols Nerd Font:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = xbacklight pulseaudio memory cpu wlan eth battery temperature
+modules-right = updates-pacman xbacklight pulseaudio memory cpu wlan eth battery temperature
 
 tray-position = right
 tray-padding = 2
@@ -319,5 +319,10 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-pacman.sh
+interval = 600
 
 ; vim:ft=dosini
