@@ -1,3 +1,5 @@
+issues:
+  new: true
 linters:
   enable-all: true
   disable:
