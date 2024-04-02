@@ -57,7 +57,7 @@ font-4 = Symbols Nerd Font:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = updates-pacman xbacklight pulseaudio memory cpu wlan eth battery temperature tray
+modules-right = updates-pacman-aurhelper xbacklight pulseaudio memory cpu wlan eth battery temperature tray
 
 ;wm-restack = i3
 ;override-redirect = true
@@ -321,10 +321,10 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-[module/updates-pacman]
+[module/updates-pacman-aurhelper]
 type = custom/script
-exec = ~/.config/polybar/scripts/updates-pacman.sh
-click-left = ~/.config/polybar/scripts/updates-pacman.sh
+exec = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
+click-left = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
 interval = 600
 
 ; vim:ft=dosini
