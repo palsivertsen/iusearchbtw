@@ -324,6 +324,7 @@ margin-bottom = 5
 [module/updates-pacman]
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-pacman.sh
+click-left = ~/.config/polybar/scripts/updates-pacman.sh
 interval = 600
 
 ; vim:ft=dosini
