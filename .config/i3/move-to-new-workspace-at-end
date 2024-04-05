@@ -1,5 +1,0 @@
-#!/bin/bash
-
-WS_JSON=$(i3-msg -t get_workspaces)
-
-i3-msg move container to workspace number $(jq '[.[].num] | max + 1' <<< $WS_JSON)

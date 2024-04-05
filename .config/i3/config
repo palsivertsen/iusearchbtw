@@ -35,7 +35,7 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+n exec --no-startup-id bash ~/.config/i3/new-workspace
 bindsym $mod+Shift+n exec --no-startup-id bash ~/.config/i3/new-workspace-at-end
 bindsym $mod+m exec --no-startup-id bash ~/.config/i3/move-to-new-workspace
-bindsym $mod+Shift+m exec --no-startup-id bash ~/.config/i3/move-to-new-workspace-at-end
+bindsym $mod+Shift+m exec --no-startup-id bash ~/.config/i3/move-to-new-workspace-and-follow
 
 # change focus
 bindsym $mod+h focus left
