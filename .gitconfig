@@ -64,3 +64,5 @@
 	defaultBranch = main
 [diff]
 	tool = nvimdiff
+[rerere]
+	enabled = true
