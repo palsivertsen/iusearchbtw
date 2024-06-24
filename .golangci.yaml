@@ -1,5 +1,5 @@
 issues:
-  new: true
+  new-from-rev: origin/HEAD
 linters:
   enable-all: true
   disable:
