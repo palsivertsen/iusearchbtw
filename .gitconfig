@@ -18,6 +18,7 @@
   logxmaster = logx master..
   logxnofixup = logx --grep=fixup --invert-grep
   logxnofixupmaster = logxnofixup master..
+  logxoriginhead = logx origin/HEAD..
   co = checkout
   staged = diff --staged
   diffx = diff --word-diff=color
