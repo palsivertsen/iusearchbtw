@@ -1,2 +1,4 @@
-alias watchgo='watchexec -rc --stop-timeout=1s -- "GOEXPERIMENT=rangefunc go test ./... && golangci-lint run --sort-results --color always | head -n100"'
-alias gowatch=watchgo
+alias watchexecgotest='watchexec -rc --stop-timeout=1s -- "go test -json ./... | docker run -i ghcr.io/gotesttools/gotestfmt:latest"'
+alias gotestwatchexec=watchexecgotest
+alias watchexecgolangcilint='watchexec -rc --stop-timeout=1s -- "golangci-lint run --sort-results --color always | head -n$(($(tput lines) - 3))"'
+alias golangcilitwatchexec=watchexecgolangcilint
