@@ -39,3 +39,8 @@ xset s 1800 300
 export CHROME_EXECUTABLE=google-chrome-stable
 
 tabs -2
+
+#######
+# XDG #
+#######
+export XDG_DATA_DIRS=/usr/share:/usr/local/share
