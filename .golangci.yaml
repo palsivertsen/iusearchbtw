@@ -1,38 +1,66 @@
-issues:
-  new-from-rev: origin/HEAD
+version: "2"
 linters:
-  enable-all: true
+  default: all
   disable:
-    - depguard
     - exhaustruct
-    - gofumpt
+    - mnd
     - nlreturn
     - wsl
-    # deprecated linters
-    - deadcode
-    - exhaustivestruct
-    - golint
-    - ifshort
-    - interfacer
-    - maligned
-    - nosnakecase
-    - scopelint
-    - structcheck
-    - varcheck
-
-linters-settings:
-  tagliatelle:
-    case:
+  settings:
+    depguard:
       rules:
-        json: goCamel
-        yaml: goCamel
-  varnamelen:
-    ignore-decls:
-      - T any
-      - i int
-      - ok bool
-      - r *http.Request
-      - r io.Reader
-      - ts *httptest.Server
-      - w http.ResponseWriter
-      - w io.Writer
+        deprecated:
+          deny:
+            - pkg: github.com/aws/aws-sdk-go/aws
+              desc: use "github.com/aws/aws-sdk-go-v2/aws"
+    tagliatelle:
+      case:
+        rules:
+          json: goCamel
+          yaml: goCamel
+    varnamelen:
+      ignore-decls:
+        - T any
+        - i int
+        - ok bool
+        - r *http.Request
+        - r io.Reader
+        - ts *httptest.Server
+        - w http.ResponseWriter
+        - w io.Writer
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - varnamelen
+        path: _test\.go$
+        text: ^variable name 'tt' is too short for the scope of its usage$
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - goimports
+    - gci
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - blank
+        - dot
+        - alias
+        - localmodule
+      custom-order: true
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
