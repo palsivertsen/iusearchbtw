@@ -54,7 +54,7 @@
 	new = green bold
 	whitespace = red reverse
 [merge]
-	tool = vimdiff
+	tool = nvimdiff2
 [mergetool]
 	keepBackup = false
 	writeToTemp = true
