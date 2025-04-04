@@ -69,13 +69,23 @@ awsstatus() {
 # See:
 # https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 
-PS1_EXIT_STATUS_OK="\[$(tput setaf 2)\]"
-PS1_EXIT_STATUS_ERROR="\[$(tput setaf 1)\]"
-PS1_EXIT_STATUS="\$(EXIT=\$?; if [[ \$EXIT == 0 ]]; then echo \"$PS1_EXIT_STATUS_OK\"; else echo \"$PS1_EXIT_STATUS_ERROR\"; fi; echo \$EXIT)"
-PS1_CURRENT_TIME="\[$(tput setaf 6)\]\t"
-PS1_USER_NAME="\[$(tput setaf 3)\]\u"
-PS1_WORKING_DIR="\[$(tput setaf 2)\]\w"
-export PROMPT_COMMAND='__git_ps1 "$PS1_EXIT_STATUS $PS1_CURRENT_TIME $PS1_USER_NAME $PS1_WORKING_DIR$(awsstatus)\[\033[0m\]" "\n$ \[$(tput sgr0)\]"'
+COLOR_RED="\[$(tput setaf 1)\]"
+COLOR_GREEN="\[$(tput setaf 2)\]"
+COLOR_YELLOW="\[$(tput setaf 3)\]"
+COLOR_CYAN="\[$(tput setaf 6)\]"
+COLOR_RESET="\[$(tput sgr0)\]"
+buildPS1()
+{
+	local EXIT=$?
+	local COLOR_CALC_EXIT=$(if [ $EXIT == "0" ]; then echo -n $COLOR_GREEN; else echo -n $COLOR_RED; fi)
+	local EXIT_STATUS="$COLOR_CALC_EXIT$EXIT"
+	local CURRENT_TIME="$COLOR_CYAN\t"
+	local USER_NAME="$COLOR_YELLOW\u"
+	local WORKING_DIR="$COLOR_CALC_EXIT\w"
+	echo -n "$EXIT_STATUS $CURRENT_TIME $USER_NAME $WORKING_DIR$(awsstatus)$COLOR_RESET"
+}
+
+export PROMPT_COMMAND='__git_ps1 "$(buildPS1)" "\n$COLOR_RESET$ "'
 
 #######
 # fzf #
