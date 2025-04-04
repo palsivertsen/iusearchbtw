@@ -55,6 +55,7 @@
 	whitespace = red reverse
 [merge]
 	tool = nvimdiff2
+	conflictStyle = zdiff3
 [mergetool]
 	keepBackup = false
 	writeToTemp = true
