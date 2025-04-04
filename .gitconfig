@@ -8,6 +8,8 @@
   status = auto
   branch = auto
   interactive = true
+[commit]
+	verbose = 1
 [push]
   default = simple
 	autoSetupRemote = true
