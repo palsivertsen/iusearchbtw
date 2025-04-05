@@ -74,4 +74,4 @@
 	enabled = true
 
 [include]
-	path = .gitconfig.local
+	path = ~/.gitconfig.local
