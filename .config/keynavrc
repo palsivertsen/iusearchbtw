@@ -9,6 +9,7 @@ Return warp,click 1,end
 semicolon warp,end
 w windowzoom
 c cursorzoom 300 300
+r restart
 
 # Clicking
 ctrl+1 click 1
@@ -29,3 +30,7 @@ h cut-left
 j cut-down
 k cut-up
 l cut-right
+u cut-up,cut-left
+i cut-up,cut-right
+n cut-down,cut-left
+m cut-down,cut-right
