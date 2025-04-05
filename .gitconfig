@@ -1,49 +1,49 @@
 [core]
-  autocrlf = input
-  editor = nvim
-  pager = diff-so-fancy | less -RFX
+	autocrlf = input
+	editor = nvim
+	pager = diff-so-fancy | less -RFX
 [color]
-  ui = true
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = true
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
 [commit]
 	verbose = 1
 [push]
-  default = simple
+	default = simple
 	autoSetupRemote = true
 [alias]
 	fixuphead = commit --fixup=HEAD
-  logx = log --graph --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
-  logxall = logx --all
-  logxmaster = logx master..
-  logxnofixup = logx --grep=fixup --invert-grep
-  logxnofixupmaster = logxnofixup master..
-  logxoriginhead = logx origin/HEAD..
-  co = checkout
-  staged = diff --staged
-  diffx = diff --word-diff=color
-  whatchangedx = whatchanged --oneline --graph
-  ahead = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
-  addx = add -N .
-  addn = add -N
-  s = status
-  p = add -p
-  append = commit --amend --no-edit
-  prune-features = !git checkout develop && \
-    git pull && \
-    git branch --merged | grep feature/ | xargs -r git branch -d && \
-    echo "Remaining branches:" && \
-    git branch
-  conflicts = diff --name-only --diff-filter=U
+	logx = log --graph --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
+	logxall = logx --all
+	logxmaster = logx master..
+	logxnofixup = logx --grep=fixup --invert-grep
+	logxnofixupmaster = logxnofixup master..
+	logxoriginhead = logx origin/HEAD..
+	co = checkout
+	staged = diff --staged
+	diffx = diff --word-diff=color
+	whatchangedx = whatchanged --oneline --graph
+	ahead = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+	addx = add -N .
+	addn = add -N
+	s = status
+	p = add -p
+	append = commit --amend --no-edit
+	prune-features = !git checkout develop && \
+		git pull && \
+		git branch --merged | grep feature/ | xargs -r git branch -d && \
+		echo "Remaining branches:" && \
+		git branch
+	conflicts = diff --name-only --diff-filter=U
 	prune-branches = !git pull --all --prune && git branch --merged | grep -vE "^\\\\*" | xargs -L1 git branch -d
 	; fetch and prune all branches, pull current branch, prune merged branches
 	prunex = "!sh -c 'git fetch --all --prune && git pull --quiet && export BRANCHES_TO_DELETE=$(git branch --merged | grep -Ev \"^\\*\"); if [ -n \"$BRANCHES_TO_DELETE\" ]; then git branch --delete $BRANCHES_TO_DELETE; fi'"
 
 [user]
-  email = palsivertsen@gmail.com
-  name = Pal Sivertsen
+	email = palsivertsen@gmail.com
+	name = Pal Sivertsen
 [pull]
 	ff = only
 [color "diff-highlight"]
