@@ -27,6 +27,7 @@
   whatchangedx = whatchanged --oneline --graph
   ahead = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
   addx = add -N .
+  addn = add -N
   s = status
   p = add -p
   append = commit --amend --no-edit
