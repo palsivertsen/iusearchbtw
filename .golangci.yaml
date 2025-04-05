@@ -50,6 +50,7 @@ formatters:
     - gci
   settings:
     gci:
+      custom-order: true
       sections:
         - standard
         - default
@@ -57,7 +58,6 @@ formatters:
         - dot
         - alias
         - localmodule
-      custom-order: true
   exclusions:
     generated: lax
     paths:
