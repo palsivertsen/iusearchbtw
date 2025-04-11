@@ -9,6 +9,7 @@ Return warp,click 1,end
 ctrl+z history-back
 BackSpace history-back
 semicolon warp,end
+f warp
 w windowzoom
 c cursorzoom 300 300
 r restart
