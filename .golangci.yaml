@@ -2,8 +2,10 @@ version: "2"
 linters:
   default: all
   disable:
+    - depguard
+    - exhaustive
     - exhaustruct
-    - mnd
+    - lll
     - nlreturn
     - wsl
   settings:
@@ -18,6 +20,25 @@ linters:
         rules:
           json: goCamel
           yaml: goCamel
+    revive:
+      enable-all-rules: true
+      rules:
+        - name: package-comments
+          disabled: true
+        - name: line-length-limit
+          disabled: true
+        - name: add-constant
+          arguments:
+            - allowInts: 0,1,2
+              allowStrs: '""'
+          exclude:
+            - TEST
+        - name: cognitive-complexity
+          exclude:
+            - TEST
+        - name: function-length
+          exclude:
+            - TEST
     varnamelen:
       ignore-decls:
         - T any
@@ -29,21 +50,15 @@ linters:
         - w http.ResponseWriter
         - w io.Writer
   exclusions:
-    generated: lax
-    presets:
-      - comments
-      - common-false-positives
-      - legacy
-      - std-error-handling
     rules:
+      - linters:
+          - err113
+          - funlen
+        path: _test\.go
       - linters:
           - varnamelen
         path: _test\.go$
-        text: ^variable name 'tt' is too short for the scope of its usage$
-    paths:
-      - third_party$
-      - builtin$
-      - examples$
+        text: variable name 'tt' is too short for the scope of its usage
 formatters:
   enable:
     - goimports
@@ -58,9 +73,3 @@ formatters:
         - dot
         - alias
         - localmodule
-  exclusions:
-    generated: lax
-    paths:
-      - third_party$
-      - builtin$
-      - examples$
