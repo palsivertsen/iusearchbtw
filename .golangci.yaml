@@ -1,4 +1,6 @@
 version: "2"
+run:
+  relative-path-mode: wd
 linters:
   default: all
   disable:
