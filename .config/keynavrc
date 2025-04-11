@@ -6,6 +6,8 @@ Escape end
 a history-back
 space warp,click 1,cursorzoom 500 500
 Return warp,click 1,end
+ctrl+z history-back
+BackSpace history-back
 semicolon warp,end
 w windowzoom
 c cursorzoom 300 300
