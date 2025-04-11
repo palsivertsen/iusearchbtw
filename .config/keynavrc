@@ -4,7 +4,7 @@ clear
 ctrl+semicolon start
 Escape end
 a history-back
-space warp,click 1,cursorzoom 500 500
+space warp,click 1,windowzoom
 Return warp,click 1,end
 ctrl+z history-back
 BackSpace history-back
