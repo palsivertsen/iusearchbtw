@@ -40,7 +40,7 @@
 	prune-branches = !git pull --all --prune && git branch --merged | grep -vE "^\\\\*" | xargs -L1 git branch -d
 	; fetch and prune all branches, pull current branch, prune merged branches
 	prunex = "!sh -c 'git fetch --all --prune && git pull --quiet && export BRANCHES_TO_DELETE=$(git branch --merged | grep -Ev \"^\\*\"); if [ -n \"$BRANCHES_TO_DELETE\" ]; then git branch --delete $BRANCHES_TO_DELETE; fi'"
-	maintenance-register-local = maintenance register --config-file ~/.gitconfig.local
+	maintenance-register-local = !git maintenance register --config-file ~/.gitconfig.local
 
 [user]
 	email = palsivertsen@gmail.com
