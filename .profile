@@ -30,6 +30,10 @@ xset s 1800 300
 # flutter #
 ###########
 export CHROME_EXECUTABLE=google-chrome-stable
+export PATH=$PATH:~/development/flutter/bin
+if [ -n "$BASH_VERSION" ]; then
+	flutter bash-completion > ~/.bash_completion.d/flutter.sh
+fi
 
 tabs -2
 
