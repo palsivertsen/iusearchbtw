@@ -96,21 +96,19 @@ button:hover {
 #battery,
 #cpu,
 #memory,
-#disk,
 #temperature,
 #backlight,
 #network,
 #pulseaudio,
-#wireplumber,
-#custom-media,
 #tray,
 #mode,
-#idle_inhibitor,
-#scratchpad,
 #power-profiles-daemon,
-#mpd {
-	padding: 0 10px;
-	color: #ffffff;
+#keyboard-state {
+	padding: 0 8px;
+	margin: 0 1px;
+	background-color: #403e41;
+	color: #fcfcfa;
+	border-radius: 2px;
 }
 
 #window,
@@ -129,18 +127,13 @@ button:hover {
 }
 
 #clock {
-	background-color: #64727D;
-}
-
-#battery {
-	background-color: #ffffff;
-	color: #000000;
+	background-color: #5b595c;
 }
 
 #battery.charging,
 #battery.plugged {
-	color: #ffffff;
-	background-color: #26A65B;
+	background-color: #a9dc76;
+	color: #2d2a2e;
 }
 
 @keyframes blink {
@@ -161,62 +154,32 @@ button:hover {
 	animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-	padding-right: 15px;
-}
-
 #power-profiles-daemon.performance {
-	background-color: #f53c3c;
-	color: #ffffff;
+	background-color: #ff6188;
 }
 
 #power-profiles-daemon.balanced {
-	background-color: #2980b9;
-	color: #ffffff;
+	background-color: #78dce8;
+	color: #2d2a2e;
 }
 
 #power-profiles-daemon.power-saver {
-	background-color: #2ecc71;
-	color: #000000;
+	background-color: #a9dc76;
+	color: #2d2a2e;
 }
 
 label:focus {
 	background-color: #000000;
 }
 
-#cpu {
-	background-color: #2ecc71;
-	color: #000000;
-}
-
-#memory {
-	background-color: #9b59b6;
-}
-
-#disk {
-	background-color: #964B00;
-}
-
-#backlight {
-	background-color: #90b1b1;
-}
-
-#network {
-	background-color: #2980b9;
-}
 
 #network.disconnected {
-	background-color: #f53c3c;
-}
-
-#pulseaudio {
-	background-color: #f1c40f;
-	color: #000000;
+	background-color: #ff6188;
 }
 
 #pulseaudio.muted {
-	background-color: #90b1b1;
-	color: #2a5c45;
+	background-color: #5b595c;
+	color: #939293;
 }
 
 #wireplumber {
@@ -242,12 +205,8 @@ label:focus {
 	background-color: #ffa000;
 }
 
-#temperature {
-	background-color: #f0932b;
-}
-
 #temperature.critical {
-	background-color: #eb4d4b;
+	background-color: #ff6188;
 }
 
 #tray {
