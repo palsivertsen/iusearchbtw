@@ -7,9 +7,13 @@
 	font-weight: bold;
 }
 
+window#waybar,
+window#waybar > * {
+	border-bottom: 3px solid #939293;
+}
+
 window#waybar {
 	background-color: #2d2a2e;
-	border-bottom: 3px solid #5b595c;
 	color: #fcfcfa;
 	transition-property: background-color;
 	transition-duration: .5s;
