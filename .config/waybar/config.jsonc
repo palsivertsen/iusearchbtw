@@ -2,13 +2,12 @@
   "height": 30,
   "spacing": 4,
   "modules-left": [
-    "sway/workspaces",
-    "sway/mode",
-    "sway/scratchpad",
+    "hyprland/workspaces",
+    "hyprland/mode",
     "custom/media"
   ],
   "modules-center": [
-    "sway/window"
+    "hyprland/window"
   ],
   "modules-right": [
     "mpd",
@@ -37,8 +36,18 @@
       "unlocked": ""
     }
   },
-  "sway/mode": {
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+  "hyprland/mode": {
     "format": "<span style=\"italic\">{}</span>"
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 50,
+    "separate-outputs": true
   },
   "sway/scratchpad": {
     "format": "{icon} {count}",
