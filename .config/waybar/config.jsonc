@@ -55,10 +55,12 @@
   },
   "cpu": {
     "format": "{usage}% ",
-    "tooltip": false
+    "tooltip": false,
+    "interval": 5
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% ",
+    "interval": 5
   },
   "temperature": {
     "critical-threshold": 80,
