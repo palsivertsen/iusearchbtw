@@ -27,17 +27,25 @@ tooltip label {
     border-bottom: 3px solid transparent;
 }
 
-#workspaces button.active {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#workspaces button.active.hosting-monitor {
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 3px solid #00ff00;
+    font-weight: bold;
 }
 
-#workspaces button:not(.hosting-monitor) {
-    background: #ff00ff;
-    opacity: 0;
-    /* width: 0; */
-    margin: 0;
-    padding: 0;
+#workspaces button.active:not(.hosting-monitor) {
+    background: #64727D;
+    color: #ffffff;
+    border-bottom: 3px solid #ffff00;
+    font-weight: bold;
+}
+
+#workspaces button.visible {
+    background: #64727D;
+    color: #ffffff;
+    border-bottom: 3px solid #ffff00;
+    font-weight: bold;
 }
 
 #mode, #clock, #battery {
