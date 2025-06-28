@@ -104,11 +104,11 @@ button:hover {
 #mode,
 #power-profiles-daemon,
 #keyboard-state {
-	padding: 0 8px;
-	margin: 0 1px;
+	padding: 0 4px;
+	margin: 0;
 	background-color: #403e41;
 	color: #fcfcfa;
-	border-radius: 2px;
+	border-radius: 1px;
 }
 
 #window,
