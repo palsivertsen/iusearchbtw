@@ -1,5 +1,11 @@
 configuration {
-	modi: "run,drun,calc,filebrowser,keys";
+	modes: "run,calc,emoji";
 	font: "Source Code Pro Semibold 12";
+	matching: "fuzzy";
+
+	calc {
+		calc-command: "wtype {result}";
+	}
 }
-@theme "/usr/share/rofi/themes/Monokai.rasi"
+
+@theme "/home/pal/.local/share/rofi/themes/rounded-blue-dark.rasi"
