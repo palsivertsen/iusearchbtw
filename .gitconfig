@@ -1,7 +1,7 @@
 [core]
 	autocrlf = input
 	editor = nvim
-	pager = diff-so-fancy | less -RFX
+	pager = diff-so-fancy | less --quit-if-one-screen --RAW-CONTROL-CHARS --no-init
 [color]
 	ui = true
 	diff = auto
