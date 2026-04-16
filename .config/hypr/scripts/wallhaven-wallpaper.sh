@@ -25,7 +25,7 @@ PARAMS="${PARAMS}&colors=${DARK_COLORS}"     # Darker colors preferred
 
 # Fetch wallpaper data from API
 echo "Querying API: ${API_URL}?${PARAMS}"
-API_RESPONSE=$(curl -s "${API_URL}?${PARAMS}" || {
+API_RESPONSE=$(curl -s -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" "${API_URL}?${PARAMS}" || {
     echo "Error: Failed to fetch from Wallhaven API"
     exit 1
 })
