@@ -81,6 +81,7 @@ if command -v hyprctl >/dev/null 2>&1; then
         hyprctl hyprpaper wallpaper "$monitor,$WALLPAPER_FILE"
     done
     
+    echo "$WALLPAPER_FILE" > "$HOME/.cache/last-wallpaper"
     echo "Wallpaper set successfully!"
 else
     echo "Warning: hyprctl not found. Wallpaper downloaded but not set."

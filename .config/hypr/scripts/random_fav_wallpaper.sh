@@ -28,4 +28,5 @@ if [ -n "$selected_wallpaper" ]; then
     for monitor in $(hyprctl monitors -j | jq -r '.[].name'); do
         hyprctl hyprpaper wallpaper "$monitor,$selected_wallpaper"
     done
+    echo "$selected_wallpaper" > "$HOME/.cache/last-wallpaper"
 fi
