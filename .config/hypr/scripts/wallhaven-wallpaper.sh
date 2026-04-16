@@ -18,10 +18,12 @@ echo "Fetching random wallpaper from Wallhaven..."
 
 # Build API query parameters
 PARAMS="atleast=${MIN_WIDTH}x${MIN_HEIGHT}"  # Minimum resolution
+PARAMS="${PARAMS}&categories=100"             # General only (no Anime/People)
 PARAMS="${PARAMS}&purity=100"                # SFW only
 PARAMS="${PARAMS}&sorting=random"            # Random order
 PARAMS="${PARAMS}&order=desc"                # Descending order
 PARAMS="${PARAMS}&colors=${DARK_COLORS}"     # Darker colors preferred
+PARAMS="${PARAMS}&q=-c:54"                   # Exclude Cars & Motorcycles category
 
 # Fetch wallpaper data from API
 echo "Querying API: ${API_URL}?${PARAMS}"
