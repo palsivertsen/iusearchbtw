@@ -155,3 +155,8 @@ branchlet() {
   fi
 }
 # End Branchlet setup
+
+########
+# Rust #
+########
+export PATH="$PATH":"$HOME/.cargo/bin"
