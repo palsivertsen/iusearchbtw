@@ -123,3 +123,11 @@ export npm_config_prefix="$HOME/.local"
 # Less #
 ########
 export LESS="--incsearch"
+
+# pnpm
+export PNPM_HOME="/home/pal/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PATH:$PNPM_HOME" ;;
+esac
+# pnpm end
