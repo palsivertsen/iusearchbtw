@@ -131,3 +131,27 @@ case ":$PATH:" in
   *) export PATH="$PATH:$PNPM_HOME" ;;
 esac
 # pnpm end
+
+# Branchlet setup: added on 2026-03-05
+_branchlet_completions() {
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  local commands="create list delete settings"
+  local flags="--help --version --mode --from-wrapper"
+  if [[ ${COMP_CWORD} -eq 1 ]]; then
+    COMPREPLY=($(compgen -W "${commands} ${flags}" -- "${cur}"))
+  elif [[ "${COMP_WORDS[1]}" == "--mode" || "${COMP_WORDS[1]}" == "-m" ]]; then
+    COMPREPLY=($(compgen -W "menu create list delete settings" -- "${cur}"))
+  fi
+}
+complete -F _branchlet_completions branchlet
+branchlet() {
+  if [ $# -eq 0 ]; then
+    local dir=$(FORCE_COLOR=3 command branchlet --from-wrapper)
+    if [ -n "$dir" ]; then
+      builtin cd "$dir" && echo "Branchlet: Navigated to $(pwd)"
+    fi
+  else
+    command branchlet "$@"
+  fi
+}
+# End Branchlet setup
