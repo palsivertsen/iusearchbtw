@@ -1,7 +1,7 @@
 configuration {
-	modes: "run,calc,emoji";
+	modes: [ run, calc, emoji ];
 	font: "Source Code Pro Semibold 12";
-	matching: "fuzzy";
+	matching: [ fuzzy ];
 
 	calc {
 		calc-command: "wtype {result}";
