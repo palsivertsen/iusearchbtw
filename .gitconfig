@@ -62,7 +62,7 @@
 	new = green bold
 	whitespace = red reverse
 [merge]
-	tool = nvimdiff
+	tool = meld
 	conflictStyle = zdiff3
 [mergetool]
 	keepBackup = false
