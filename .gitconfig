@@ -73,6 +73,7 @@
 	defaultBranch = main
 [diff]
 	tool = nvimdiff
+	wsErrorHighlight = all
 [rerere]
 	enabled = true
 
