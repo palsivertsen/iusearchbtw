@@ -16,6 +16,8 @@
 [alias]
 	fixuphead = commit --fixup=HEAD
 	logx = log --graph --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
+	logchanges = log --no-merges --topo-order --pretty=medium
+	logexperiment = log --graph --pretty=format:'%C(auto)%h %aN (%ar)%d%n%s%n%n%-b'
 	logxall = logx --all
 	logxmaster = logx master..
 	logxnofixup = logx --grep=fixup --invert-grep
