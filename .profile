@@ -49,3 +49,11 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
+
+#############
+# cobra-cli #
+#############
+
+if [ -n "$BASH_VERSION" ] -a ! hash cobra-cli >/dev/null 2>&1; then
+	cobra-cli completion bash > ~/.bash_completion.d/cobra-cli.sh
+fi
