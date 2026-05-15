@@ -1,9 +1,10 @@
 {
+  "layer": "top",
+  "position": "top",
   "height": 30,
   "spacing": 4,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/mode",
     "hyprland/window"
   ],
   "modules-center": [
@@ -12,14 +13,12 @@
   "modules-right": [
     "pulseaudio",
     "network",
-    "power-profiles-daemon",
     "cpu",
     "memory",
     "temperature",
     "backlight",
     "keyboard-state",
     "battery",
-    "battery#bat2",
     "tray"
   ],
   "keyboard-state": {
@@ -35,9 +34,6 @@
     "format": "{id}",
     "on-click": "activate",
     "sort-by-number": true
-  },
-  "hyprland/mode": {
-    "format": "<span style=\"italic\">{}</span>"
   },
   "hyprland/window": {
     "format": "{title}",
@@ -103,20 +99,6 @@
       "",
       ""
     ]
-  },
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
