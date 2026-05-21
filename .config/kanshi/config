@@ -1,0 +1,99 @@
+# kanshi display profiles - auto-applied when matching monitors connect/disconnect
+#
+# IMPORTANT: kanshi identifiers are  "make model serial"  from the Wayland protocol,
+# NOT from hyprctl.  When a field is missing, kanshi substitutes "Unknown":
+#   - laptop (eDP-1): no serial  → "Lenovo Group Limited 0x403A Unknown"
+#   - external monitors: no model is never the case here — all three fields sent
+#
+# "...output * enable"  is REQUIRED in any profile where not all connected monitors
+# are explicitly listed (kanshi only matches when every head is accounted for).
+#
+# V-H-V centering math:
+#   side monitors rotated 90°/270°: physical WxH → logical HxW
+#   center_y  = (side_logical_height - center_height) / 2
+#   laptop_x  = (total_logical_width - laptop_width)  / 2
+
+# ─── Office ────────────────────────────────────────────────────────────────────
+# Layout:  Left(270°) LEN P27q-10 | Center LEN P27q-10 | Right(90°) Dell P2415Q
+#          Laptop centered below
+#
+# Both LEN P27q-10 monitors have identical make/model/serial in the Wayland
+# protocol; kanshi 1.x cannot have duplicate identifiers in one profile.
+# They are absorbed by "...output * enable" and then positioned by the exec hook
+# using EDID hashes from /sys/class/drm/ — immune to connector name changes.
+#
+# Positions:
+#   Left  (270°): 1440×2560  @ 0,0
+#   Center:       2560×1440  @ 1440,(2560-1440)/2 = 1440,560
+#   Right  (90°): 1440×2560  @ 1440+2560 = 4000,0
+#   Laptop 1920×1200         @ (5440-1920)/2=1760, below=2560 → 1760,2560
+profile office {
+    output "Dell Inc. DELL P2415Q P2PC251R0C2L" {
+        mode 2560x1440
+        transform 90
+        position 4000,0
+    }
+    output "Lenovo Group Limited 0x403A Unknown" {
+        mode 1920x1200
+        position 1760,2560
+    }
+    ...output * enable
+    exec ~/.config/hypr/scripts/office-monitors.sh
+}
+
+# ─── Home ──────────────────────────────────────────────────────────────────────
+# Layout:  Left(270°) AOC 2795E | Center ASUS MG278 | Right(90°) AOC 2795E
+#          Laptop at physical desk position
+#
+# Positions:
+#   Left  (270°): 1080×1920  @ 0,0
+#   Center:       2560×1440  @ 1080,(1920-1440)/2 = 1080,240
+#   Right  (90°): 1080×1920  @ 1080+2560 = 3640,0
+#   Laptop 1920×1200         @ 1368,1697  (physical desk alignment)
+#
+# NOTE: verify identifiers at home with:
+#   WAYLAND_DEBUG=client kanshi -c /dev/null 2>&1 | grep -E "\.make|\.model|\.serial"
+profile home {
+    output "AOC 2795E CODBBJA000136" {
+        mode 1920x1080@60Hz
+        transform 270
+        position 0,0
+    }
+    output "Ancor Communications Inc ASUS MG278 0x00024CCC" {
+        mode 2560x1440
+        position 1080,240
+    }
+    output "AOC 2795E CODBAJA002862" {
+        mode 1920x1080@60Hz
+        transform 90
+        position 3640,0
+    }
+    output "Lenovo Group Limited 0x403A Unknown" {
+        mode 1920x1200@60Hz
+        position 1368,1697
+    }
+    ...output * enable
+}
+
+# ─── Meeting room ──────────────────────────────────────────────────────────────
+# TV above, laptop below.  Adjust laptop y if TV is not 1080p.
+# LG TV identifier: verify with the WAYLAND_DEBUG command above if it doesn't match.
+profile meeting {
+    output "LG Electronics LG TV 0x01010101" {
+        mode preferred
+        position 0,0
+    }
+    output "Lenovo Group Limited 0x403A Unknown" {
+        mode 1920x1200@60Hz
+        position 0,1080
+    }
+    ...output * enable
+}
+
+# ─── Laptop only ───────────────────────────────────────────────────────────────
+profile laptop {
+    output "Lenovo Group Limited 0x403A Unknown" {
+        mode 1920x1200@60Hz
+        position 0,0
+    }
+}
