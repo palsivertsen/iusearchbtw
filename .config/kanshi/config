@@ -35,7 +35,7 @@ profile office {
     }
     output "Lenovo Group Limited 0x403A Unknown" {
         mode 1920x1200
-        position 1760,2560
+        position 5440,1360
     }
     ...output * enable
     exec ~/.config/hypr/scripts/office-monitors.sh
@@ -73,7 +73,6 @@ profile home {
         position 1368,1697
     }
     ...output * enable
-    exec pkill waybar || true; sleep 0.3; waybar &
 }
 
 # ─── Meeting room ──────────────────────────────────────────────────────────────
@@ -89,7 +88,6 @@ profile meeting {
         position 0,1080
     }
     ...output * enable
-    exec pkill waybar || true; sleep 0.3; waybar &
 }
 
 # ─── Laptop only ───────────────────────────────────────────────────────────────
@@ -98,5 +96,4 @@ profile laptop {
         mode 1920x1200@60Hz
         position 0,0
     }
-    exec pkill waybar || true; sleep 0.3; waybar &
 }
