@@ -73,6 +73,7 @@ profile home {
         position 1368,1697
     }
     ...output * enable
+    exec pkill waybar || true; sleep 0.3; waybar &
 }
 
 # ─── Meeting room ──────────────────────────────────────────────────────────────
@@ -88,6 +89,7 @@ profile meeting {
         position 0,1080
     }
     ...output * enable
+    exec pkill waybar || true; sleep 0.3; waybar &
 }
 
 # ─── Laptop only ───────────────────────────────────────────────────────────────
@@ -96,4 +98,5 @@ profile laptop {
         mode 1920x1200@60Hz
         position 0,0
     }
+    exec pkill waybar || true; sleep 0.3; waybar &
 }

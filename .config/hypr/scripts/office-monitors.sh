@@ -34,3 +34,7 @@ fi
 
 hyprctl keyword monitor "$left, 2560x1440, 0x0, 1, transform, 3"
 hyprctl keyword monitor "$center, 2560x1440, 1440x560, 1"
+
+pkill waybar || true
+sleep 0.3
+waybar &
