@@ -24,6 +24,7 @@
 	logxnofixupmaster = logxnofixup master..
 	logxoriginhead = logx origin/HEAD..
 	co = checkout
+	codp = ! git checkout main || git checkout master && git pull
 	staged = diff --staged
 	diffx = diff --word-diff=color
 	whatchangedx = whatchanged --oneline --graph
