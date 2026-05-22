@@ -160,3 +160,10 @@ branchlet() {
 # Rust #
 ########
 export PATH="$PATH":"$HOME/.cargo/bin"
+
+###########
+# Aliases #
+###########
+if command -v glow >/dev/null 2>&1; then
+	alias glow='glow -w $(tput cols) -s dracula'
+fi
