@@ -49,7 +49,7 @@ profile office {
 #   Left  (270°): 1080×1920  @ 0,0
 #   Center:       2560×1440  @ 1080,(1920-1440)/2 = 1080,240
 #   Right  (90°): 1080×1920  @ 1080+2560 = 3640,0
-#   Laptop 1920×1200         @ 1368,1697  (physical desk alignment)
+#   Laptop 1920×1200         @ (4720-1920)/2=1400, below center=1680 → 1400,1680
 #
 # NOTE: verify identifiers at home with:
 #   WAYLAND_DEBUG=client kanshi -c /dev/null 2>&1 | grep -E "\.make|\.model|\.serial"
@@ -70,7 +70,7 @@ profile home {
     }
     output "Lenovo Group Limited 0x403A Unknown" {
         mode 1920x1200@60Hz
-        position 1368,1697
+        position 1400,1680
     }
     ...output * enable
 }

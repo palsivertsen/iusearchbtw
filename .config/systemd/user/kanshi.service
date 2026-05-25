@@ -1,0 +1,12 @@
+[Unit]
+Description=Dynamic display configuration
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=kanshi
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
